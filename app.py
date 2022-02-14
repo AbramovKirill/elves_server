@@ -11,11 +11,29 @@ def index():
     responce = flower.get_products()
     return jsonify(responce)
 
+@app.route('/go')
+def index1():
+    responce = flower.get_orders()
+    return jsonify(responce)
 
 @app.route('/anw')
-def index2():
+def index3():
     responce = flower.add_new_order()
     return str(responce)
+
+@app.route('/ap')
+def index4():
+    responce = flower.addFullProd()
+    return str(responce)
+    
+@app.route('/afo')
+def index5():
+    responce = flower.addFullOrd()
+    return str(responce)
+
+
+
+
 
 
 
