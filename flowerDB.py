@@ -9,27 +9,8 @@ coll2 = db.products
 
 
 
-def add_new_order():
-      mydict = {
-      "orderItems" : [ {
-            "amount" : 1,
-            "id" : "-MiYEZuzULM-wg0KuKPw",
-            "name" : "Natural Jasmine Green Tea",
-            "price" : 3.5
-      }, {
-            "amount" : 1,
-            "id" : "-MiYEWhO5qzS_hndN60b",
-            "name" : "Phoenix Honey Orchid",
-            "price" : 10.5
-      } ],
-      "user" : {
-            "city" : "Київ",
-            "email" : "maab2198@gmail.com",
-            "name" : "Марія Вікторівна Абрамова",
-            "postal_code" : "02149",
-            "street" : "Бажана 26"
-            }
-      }
+def add_new_order(mydict):
+
       x = coll.insert_one(mydict)
       return x.inserted_id
 
